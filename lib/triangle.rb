@@ -31,5 +31,6 @@ class Triangle
 
 end
 
-t = Triangle.new(0,2,3)
+bad = Triangle.new(0,2,3)
+
 binding.pry
