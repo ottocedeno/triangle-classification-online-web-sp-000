@@ -1,9 +1,5 @@
-require 'pry'
-
 class Triangle
-
   attr_reader :sides
-
   def initialize(side_one, side_two, side_three)
     @sides = [side_one, side_two, side_three]
   end
@@ -18,7 +14,6 @@ class Triangle
 
   def kind
     raise TriangleError if self.zero_or_negative || self.triangle_inequality?
-
     if sides.uniq.size == 1
       :equilateral
     elsif sides.uniq.size == 2
@@ -30,6 +25,7 @@ class Triangle
 
   class TriangleError < StandardError
   end
+  
 end
 
 # binding.pry
