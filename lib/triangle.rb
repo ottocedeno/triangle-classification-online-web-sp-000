@@ -4,7 +4,7 @@ class Triangle
     @sides = [side_one, side_two, side_three]
   end
 
-  def zero_or_negative
+  def zero_or_negative?
     sides.any? {|side| side <= 0}
   end
 
@@ -13,7 +13,7 @@ class Triangle
   end
 
   def kind
-    raise TriangleError if self.zero_or_negative || self.triangle_inequality?
+    raise TriangleError if self.zero_or_negative? || self.triangle_inequality?
     if sides.uniq.size == 1
       :equilateral
     elsif sides.uniq.size == 2
@@ -25,7 +25,7 @@ class Triangle
 
   class TriangleError < StandardError
   end
-  
+
 end
 
 # binding.pry
