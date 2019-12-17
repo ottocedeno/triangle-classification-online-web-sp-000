@@ -25,7 +25,7 @@ class Triangle
 
   class TriangleError < StandardError
     def message
-      "Go back to elementary school, that's not a triangle"
+      "Go back to elementary school, that's not a triangle..."
     end
   end
 
