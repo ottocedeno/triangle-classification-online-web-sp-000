@@ -1,3 +1,5 @@
+require 'pry'
+
 class Triangle
   attr_reader :sides
   def initialize(side_one, side_two, side_three)
@@ -24,8 +26,13 @@ class Triangle
   end
 
   class TriangleError < StandardError
+    def message
+      "Go back to elementary school, that's not a triangle..."
+    end
   end
 
 end
 
-# binding.pry
+bad = Triangle.new(0, 2, 3)
+good = Triangle.new(4, 4, 4)
+binding.pry
