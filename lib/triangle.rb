@@ -1,3 +1,5 @@
+require 'pry'
+
 class Triangle
   attr_reader :sides
   def initialize(side_one, side_two, side_three)
