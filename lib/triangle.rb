@@ -31,4 +31,4 @@ class Triangle
 
 end
 
-# binding.pry
+binding.pry
